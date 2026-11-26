@@ -631,7 +631,6 @@ h1 span {
   font-size: 14px;
 }
 
-/* Модуль 06: Блок із 3 цінових пакетів */
 .pricing {
   background: var(--bg-soft);
 }
@@ -821,7 +820,6 @@ h1 span {
   font-size: 12px;
 }
 
-/* Загальні правила доступності та адаптивності */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 88px;
@@ -920,7 +918,6 @@ textarea:focus-visible,
   text-align: right;
 }
 
-/* Модуль 04: фонове зображення */
 .media-image-section {
   position: relative;
   isolation: isolate;
@@ -981,7 +978,6 @@ textarea:focus-visible,
   color: var(--white);
 }
 
-/* Модуль 04: фонове відео */
 .media-video-section {
   position: relative;
   isolation: isolate;
@@ -1015,7 +1011,6 @@ textarea:focus-visible,
   z-index: 2;
 }
 
-/* Модуль 05: форма та таблиця */
 .tutor-apply__header {
   margin-bottom: var(--sp-4);
 }
@@ -1193,7 +1188,6 @@ textarea:focus-visible,
     grid-template-columns: 1fr;
   }
 
-  /* Виділений пакет стає першим на мобільному екрані */
   .pricing-card--featured {
     order: -1;
   }
