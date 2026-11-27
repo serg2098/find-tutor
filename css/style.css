@@ -759,6 +759,7 @@ h1 span {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--r-md);
   background: rgba(255, 255, 255, 0.07);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .testimonial-card p {
@@ -766,6 +767,13 @@ h1 span {
   font-size: 16px;
   line-height: 28px;
   margin: 20px 0;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  border-color: #c6d2ff;
+  box-shadow: var(--shadow);
 }
 
 .student {
@@ -898,8 +906,10 @@ textarea:focus-visible,
 .subject-card,
 .tutor-card,
 .step-card,
+
 .testimonial-card {
   min-width: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .subject-info,
@@ -1033,7 +1043,10 @@ textarea:focus-visible,
   gap: 40px;
   align-items: start;
 }
-
+.tutor-apply__table-col,
+.tutor-apply__form-col{
+  min-width: 0;
+}
 .table-wrapper {
   width: 100%;
   overflow-x: auto;
@@ -1046,7 +1059,6 @@ textarea:focus-visible,
   width: 100%;
   border-collapse: collapse;
   text-align: left;
-  min-width: 420px;
 }
 
 .rates-table caption {
@@ -1198,6 +1210,48 @@ textarea:focus-visible,
 }
 
 @media (max-width: 768px) {
+.subject-card:hover,
+.subject-card:active {
+  transform: translateY(-4px);
+  border-color: #c6d2ff;
+  box-shadow: var(--shadow);
+}
+
+.subject-card:hover .subject-icon,
+.subject-card:active .subject-icon {
+  transform: scale(1.08) rotate(-4deg);
+}
+
+.tutor-card:hover,
+.tutor-card:active {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.tutor-card:hover .tutor-photo img,
+.tutor-card:active .tutor-photo img {
+  transform: scale(1.06);
+}
+
+.step-card:hover,
+.step-card:active {
+  transform: translateY(-4px);
+  border-color: #c6d2ff;
+  box-shadow: var(--shadow);
+}
+
+.pricing-card:hover,
+.pricing-card:active {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  background: #fcfcff;
+}
+
+.pricing-card--featured:hover,
+.pricing-card--featured:active {
+  transform: translateY(-6px) scale(1.02);
+}
+
   .container {
     width: calc(100% - 32px);
   }
@@ -1221,6 +1275,11 @@ textarea:focus-visible,
     border-bottom: 1px solid var(--line);
     background: var(--white);
     box-shadow: var(--shadow);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.25 ease, transform 0.25 ease,visibility 0.25 ease;
   }
 
   .menu-toggle:checked ~ .nav-panel {
@@ -1228,6 +1287,10 @@ textarea:focus-visible,
     flex-direction: column;
     align-items: stretch;
     gap: 20px;
+    
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 
   .nav-links {
@@ -1306,6 +1369,25 @@ textarea:focus-visible,
     flex-direction: column;
     gap: 12px;
     text-align: center;
+  }
+  .tutor-apply__grid {
+    gap: 24px;
+  }
+
+  .rates-table caption {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .rates-table th,
+  .rates-table td {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+
+  .apply-form__group {
+    padding: 16px 12px;
+    min-width: 0;
   }
 }
 
