@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Background: Purple Rounded Square -->
+  <rect x="32" y="32" width="448" height="448" rx="96" ry="96" fill="#6C5CE7" />
+
+  <!-- Book Group -->
+  <g transform="translate(0, 10)">
+    <!-- Book Shadow / Base -->
+    <path d="M 128 320 C 176 304, 224 304, 256 316 C 288 304, 336 304, 384 320 L 384 336 C 336 320, 288 320, 256 332 C 224 320, 176 320, 128 336 Z" fill="#4A3E9D" opacity="0.5" />
+
+    <!-- Left Page -->
+    <path d="M 128 192 C 176 176, 224 176, 256 188 L 256 316 C 224 304, 176 304, 128 320 Z" fill="#FFFFFF" />
+
+    <!-- Right Page -->
+    <path d="M 384 192 C 336 176, 288 176, 256 188 L 256 316 C 288 304, 336 304, 384 320 Z" fill="#F0F0F0" />
+
+    <!-- Center Spine / Fold Line -->
+    <line x1="256" y1="188" x2="256" y2="316" stroke="#6C5CE7" stroke-width="4" stroke-linecap="round" />
+
+    <!-- Simple Page Lines (Left Page) -->
+    <line x1="160" y1="220" x2="228" y2="210" stroke="#E0E0E0" stroke-width="6" stroke-linecap="round" />
+    <line x1="160" y1="245" x2="228" y2="235" stroke="#E0E0E0" stroke-width="6" stroke-linecap="round" />
+
+    <!-- Simple Page Lines (Right Page) -->
+    <line x1="284" y1="210" x2="352" y2="220" stroke="#D5D5D5" stroke-width="6" stroke-linecap="round" />
+    <line x1="284" y1="235" x2="352" y2="245" stroke="#D5D5D5" stroke-width="6" stroke-linecap="round" />
+  </g>
+</svg>
